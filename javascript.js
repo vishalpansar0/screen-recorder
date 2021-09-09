@@ -8,7 +8,7 @@ let desktopstream;
 
 shareBtn.addEventListener('click', () => {
     desktopstream = navigator.mediaDevices.getDisplayMedia({video: true});
-    const track = desktopstream.getVideoTracks()[0];
+    const track = desktopstream.getVideoTracks();
 
     stream = new MediaStream(track);
     console.log('Stream', stream);
